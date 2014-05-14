@@ -1,6 +1,6 @@
 # shinyMCE
 
-\code{shinyMCE} adds the ability to use tinyMCE WYSWYG editor as a component
+shinyMCE adds the ability to use tinyMCE WYSWYG editor as a component
     in Shiny apps.
 
 To install, run:
@@ -11,5 +11,5 @@ if (!require("devtools"))
 devtools::install_github("shinyMCE", "mul118")
 ```
 
-The \code{shinyMCE}  source code is hosted at https://github.com/mul118/shinyMCE.
+The shinyMCE source code is hosted at https://github.com/mul118/shinyMCE
     

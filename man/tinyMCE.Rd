@@ -2,15 +2,15 @@
 \alias{tinyMCE}
 \title{tinyMCE editor element}
 \usage{
-tinyMCE(inputId, content = "Click to edit text.", options = NULL)
+tinyMCE(inputId, content, options = NULL)
 }
 \arguments{
-  \item{inputId}{inputId associated with the editor}
+  \item{inputId}{id associated with the editor}
 
   \item{content}{editor content. May be a string or HTML
   embedded in an \code{\link{HTML}} function}
 
-  \item{options}{a string containing tinyMCE initialization
+  \item{options}{string containing tinyMCE initialization
   options. See demos or source code on the tinyMCE examples
   website
   \code{\link{http://www.tinymce.com/tryit/basic.php}} for
@@ -21,5 +21,12 @@ a tinyMCE editor element that can be included in a panel
 }
 \description{
 Display a tinyMCE editor within an application page.
+}
+\examples{
+# Basic editors
+tinyMCE('editor1', 'Click to edit text')
+tinyMCE('editor1', HTML('<p><strong>Click</strong> to edit text</p>'))
+# With options
+tinyMCE('editor1', 'This is an inline tinyMCE editor', 'inline: true')
 }
 
