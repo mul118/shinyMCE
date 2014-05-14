@@ -1,0 +1,16 @@
+{
+    "contents" : "#' tinyMCE editor element\n#'\n#' Display a tinyMCE editor within an application page.\n#' @param inputId inputId associated with the editor\n#' @param content editor content. May be a string or HTML embedded in an \\code{\\link{HTML}} function\n#' @param options a string containing tinyMCE initialization options. See demos or source code on the tinyMCE examples website \\code{\\link{http://www.tinymce.com/tryit/basic.php}} for more information.\n#' @return a tinyMCE editor element that can be included in a panel\n#' @export\ntinyMCE <- function(inputId, content = 'Click to edit text.', options = NULL){\n  tagList(\n    singleton(HTML('<script src=\"//tinymce.cachefly.net/4.0/tinymce.min.js\"></script>')),\n    singleton(tags$script(src = 'shinyMCE/shiny-tinymce-bindings.js')),\n    tags$div(id = inputId, class = \"shinytinymce\", content, style = \"resize: none; width: 100%; height: 100%; border-style: none; background: gainsboro;\"),\n    tags$script(paste0('tinymce.init({selector:\".shinytinymce\", ', options, '});'))\n  )\n}\n\n#' Update tinyMCE editor \n#'\n#' Update tinyMCE editor object to display new content.\n#' @param session the \\code{session} object passed to function given to \\code{shinyServer}\n#' @param inputId id associated with the tinyMCE editor\n#' @param content new content to place withing the editor\n#' @export\nupdateTinyMCE <- function(session, inputId, content){\n  data_list <- list(id = inputId, content = content)\n  session$sendCustomMessage(type = \"shinyMCE.update\", data_list)\n}\n\n",
+    "created" : 1400006787969.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2096086207",
+    "id" : "AF5E3B5A",
+    "lastKnownWriteTime" : 1400092666,
+    "path" : "~/Desktop/dev_software/shinyMCE/R/shinyMCE.R",
+    "project_path" : "R/shinyMCE.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "(function(){\n\nvar shinymceInputBinding = new Shiny.InputBinding();\n$.extend(shinymceInputBinding, {\n  find: function(scope) {\n    return $(scope).find(\".shinytinymce\");\n  },\n  getValue: function(el) {\n    return tinyMCE.get($(el).attr('id')).getContent();\n  },\n  setValue: function(el, value) {\n    //TODO\n  },\n  subscribe: function(el, callback) {  \n    tinyMCE.get($(el).attr('id')).on(\"change\", function(e) {\n                 callback();\n         });     \n    $(el).on('change.shinymceInputBinding', function(e){callback();});\n  },\n  unsubscribe: function(el) {\n  //$(el).off(\".incrementBinding\");\n  }\n});\n\nShiny.inputBindings.register(shinymceInputBinding);\n\n/*tinymce.init({\n    inline: true, \n    selector:\".shinytinymce\",\n    plugins: [\"advlist autolink lists link image charmap print preview anchor\",\n\t\t\t\t\t\t\"searchreplace visualblocks code fullscreen\",\n\t\t\t\t\t\t\"insertdatetime media table contextmenu paste\"],\n\t\ttoolbar: \"insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image\"\n    \n});*/\n\nShiny.addCustomMessageHandler('shinyMCE.update', function(data) {\n  tinyMCE.get(data.id).setContent(data.content);\n  $('#'+data.id).trigger('change');\n});\n\n\n})();",
+    "created" : 1400017441317.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4120696117",
+    "id" : "3E90DE10",
+    "lastKnownWriteTime" : 1400089075,
+    "path" : "~/Desktop/dev_software/shinyMCE/inst/www/shiny-tinymce-bindings.js",
+    "project_path" : "inst/www/shiny-tinymce-bindings.js",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "js"
+}

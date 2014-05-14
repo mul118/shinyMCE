@@ -1,0 +1,16 @@
+{
+    "contents" : "# shinyMCE\n\n\\code{shinyMCE} adds the ability to use tinyMCE WYSWYG editor as a component\n    in Shiny apps.\n\nTo install, run:\n\n```r\nif (!require(\"devtools\"))\n  install.packages(\"devtools\")\ndevtools::install_github(\"shinyMCE\", \"mul118\")\n```\n\nThe \\code{shinyMCE}  source code is hosted at https://github.com/mul118/shinyMCE.\n    ",
+    "created" : 1400092737217.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "373673953",
+    "id" : "B30A59CC",
+    "lastKnownWriteTime" : 1400092825,
+    "path" : "~/Desktop/dev_software/shinyMCE/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}

@@ -1,0 +1,9 @@
+{
+    "path" : "~/Desktop/dev_software/shiny-dashboards/dashboards/gridster_dash",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
