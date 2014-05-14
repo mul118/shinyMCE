@@ -8,6 +8,7 @@ Maintainer: Misha Lisovich <mikhail.lisovich@gmail.com>
 Description: shinyMCE adds ability to use tinyMCE WYSWYG editor as a component
     in Shiny apps.
 License: MIT
+Suggests: testthat
 Depends:
     R (>= 2.15.1)
 Imports:

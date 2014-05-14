@@ -25,7 +25,6 @@ runApp(list(
   }
 ))
 
-
 #Inline Editor
 inline_opts <- 
         'inline: true, 
