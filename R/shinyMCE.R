@@ -9,6 +9,7 @@
 #' # Basic editors
 #' tinyMCE('editor1', 'Click to edit text')
 #' tinyMCE('editor1', HTML('<p><strong>Click</strong> to edit text</p>'))
+#' 
 #' # With options
 #' tinyMCE('editor1', 'This is an inline tinyMCE editor', 'inline: true')
 #' @import shiny
