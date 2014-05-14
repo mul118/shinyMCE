@@ -1,12 +1,12 @@
 {
-    "contents" : "# shinyMCE\n\n\\code{shinyMCE} adds the ability to use tinyMCE WYSWYG editor as a component\n    in Shiny apps.\n\nTo install, run:\n\n```r\nif (!require(\"devtools\"))\n  install.packages(\"devtools\")\ndevtools::install_github(\"shinyMCE\", \"mul118\")\n```\n\nThe \\code{shinyMCE}  source code is hosted at https://github.com/mul118/shinyMCE.\n    ",
+    "contents" : "# shinyMCE\n\n[![Build Status](https://travis-ci.org/mul118/shinyMCE.svg?branch=master)](https://travis-ci.org/mul118/shinyMCE)\n\nshinyMCE adds the ability to use tinyMCE WYSWYG editor as a component\n    in Shiny apps.\n\nTo install, run:\n\n```r\nif (!require(\"devtools\"))\n  install.packages(\"devtools\")\ndevtools::install_github(\"shinyMCE\", \"mul118\")\n```\n\nThe shinyMCE source code is hosted at https://github.com/mul118/shinyMCE.  More details and examples may be found at http://mul118.github.io/shinyMCE/\n    ",
     "created" : 1400092737217.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "373673953",
+    "hash" : "3063757712",
     "id" : "B30A59CC",
-    "lastKnownWriteTime" : 1400092825,
+    "lastKnownWriteTime" : 1400102290,
     "path" : "~/Desktop/dev_software/shinyMCE/README.md",
     "project_path" : "README.md",
     "properties" : {

@@ -13,5 +13,5 @@ if (!require("devtools"))
 devtools::install_github("shinyMCE", "mul118")
 ```
 
-The shinyMCE source code is hosted at https://github.com/mul118/shinyMCE
+The shinyMCE source code is hosted at https://github.com/mul118/shinyMCE.  More details and examples may be found at http://mul118.github.io/shinyMCE/
     
