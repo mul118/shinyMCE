@@ -1,0 +1,17 @@
+{
+    "contents" : "context(\"shinyMCE\")\n\ntest_that('all package functions are present',{\n  expect_true(is.function(tinyMCE))\n  expect_true(is.function(updateTinyMCE))\n})",
+    "created" : 1400096053852.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3385712977",
+    "id" : "7C617281",
+    "lastKnownWriteTime" : 1400098645,
+    "path" : "~/Desktop/dev_software/shinyMCE/tests/testthat/test-shinyMCE.R",
+    "project_path" : "tests/testthat/test-shinyMCE.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

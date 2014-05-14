@@ -1,0 +1,16 @@
+{
+    "contents" : "# shinyMCE\n\n[![Build Status](https://travis-ci.org/mul118/shinyMCE.svg?branch=master)](https://travis-ci.org/mul118/shinyMCE)\n\nshinyMCE adds the ability to use tinyMCE WYSWYG editor as a component\n    in Shiny apps.\n\nTo install, run:\n\n```r\nif (!require(\"devtools\"))\n  install.packages(\"devtools\")\ndevtools::install_github(\"shinyMCE\", \"mul118\")\n```\n\nThe shinyMCE source code is hosted at https://github.com/mul118/shinyMCE\n    ",
+    "created" : 1400092737217.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "253445088",
+    "id" : "B30A59CC",
+    "lastKnownWriteTime" : 1400098070,
+    "path" : "~/Desktop/dev_software/shinyMCE/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}

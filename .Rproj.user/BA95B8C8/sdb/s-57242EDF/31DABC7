@@ -1,0 +1,17 @@
+{
+    "contents" : "language: c\n\nbefore_install:\n  - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh\n  - chmod 755 ./travis-tool.sh\n  - ./travis-tool.sh bootstrap\ninstall:\n  - ./travis-tool.sh r_binary_install Rcpp\n  - ./travis-tool.sh r_binary_install rgl\n  - ./travis-tool.sh r_binary_install XML\n  - ./travis-tool.sh r_binary_install RJSONIO\n  - ./travis-tool.sh github_package hadley/dplyr\n  - ./travis-tool.sh github_package hadley/testthat\n  - ./travis-tool.sh github_package rstudio/shiny\n  - ./travis-tool.sh github_package mul118/shinyMCE\n  - ./travis-tool.sh install_deps\n\nscript: ./travis-tool.sh run_tests\n\non_failure:\n  - ./travis-tool.sh dump_logs\n\nbranches:\n  except:\n  - /-expt$/\n\nnotifications:\n  email:\n    recipients:\n    - mikhail.lisovich@gmail.com\n    on_success: change\n    on_failure: change",
+    "created" : 1400096996703.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2813635603",
+    "id" : "31DABC7",
+    "lastKnownWriteTime" : 1400097140,
+    "path" : "~/Desktop/dev_software/shinyMCE/.travis.yml",
+    "project_path" : ".travis.yml",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "text"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "(function(){\n\nvar shinymceInputBinding = new Shiny.InputBinding();\n$.extend(shinymceInputBinding, {\n  find: function(scope) {\n    return $(scope).find(\".shinytinymce\");\n  },\n  getValue: function(el) {\n    return tinyMCE.get($(el).attr('id')).getContent();\n  },\n  setValue: function(el, value) {\n    //TODO\n  },\n  subscribe: function(el, callback) {  \n    tinyMCE.get($(el).attr('id')).on(\"change\", function(e) {\n                 callback();\n         });     \n    $(el).on('change.shinymceInputBinding', function(e){callback();});\n  },\n  unsubscribe: function(el) {\n  //$(el).off(\".incrementBinding\");\n  }\n});\nShiny.inputBindings.register(shinymceInputBinding);\n\n\nShiny.addCustomMessageHandler('shinyMCE.update', function(data) {\n  tinyMCE.get(data.id).setContent(data.content);\n  $('#'+data.id).trigger('change');\n});\n\n\n})();",
+    "created" : 1400017441317.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2386590728",
+    "id" : "3E90DE10",
+    "lastKnownWriteTime" : 1400094198,
+    "path" : "~/Desktop/dev_software/shinyMCE/inst/www/shiny-tinymce-bindings.js",
+    "project_path" : "inst/www/shiny-tinymce-bindings.js",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "js"
+}

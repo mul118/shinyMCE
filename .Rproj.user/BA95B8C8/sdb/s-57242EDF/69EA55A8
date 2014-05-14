@@ -1,0 +1,17 @@
+{
+    "contents" : "library(testthat)\ntest_check(\"shinyMCE\")",
+    "created" : 1400095849189.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3928249277",
+    "id" : "69EA55A8",
+    "lastKnownWriteTime" : 1400096805,
+    "path" : "~/Desktop/dev_software/shinyMCE/tests/test_all.R",
+    "project_path" : "tests/test_all.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
