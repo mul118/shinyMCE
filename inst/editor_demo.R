@@ -5,7 +5,7 @@
 
 library(shinyMCE)
 
-#Basic Example
+#1: Basic example
 runApp(list(
   ui = fluidPage(
     fluidRow(
@@ -25,14 +25,14 @@ runApp(list(
   }
 ))
 
-#Inline Editor
-inline_opts <- 
+
+#2: Editor with options
+editor_opts <- 
         'inline: true, 
         plugins: ["advlist autolink lists link image charmap print preview anchor",
                   "searchreplace visualblocks code fullscreen",
                   "insertdatetime media table contextmenu paste"],
         toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"'        
-
 
 runApp(list(
   ui = fluidPage(
@@ -42,7 +42,7 @@ runApp(list(
              h2('tinyMCE Editor:'),
              tinyMCE('editor1', 
                      HTML('<p>This is an inline <strong>tinyMCE editor</strong> embedded in a text block.  Click to edit.</p>'), 
-                     inline_opts),
+                     editor_opts),
              hr(),
              h2('Editor Content:'),
              verbatimTextOutput('editor1_content')
@@ -56,7 +56,7 @@ runApp(list(
 ))
 
 
-#Update Editor
+#3: Update editor from server
 runApp(list(
   ui = fluidPage(
     fluidRow(
@@ -79,5 +79,27 @@ runApp(list(
     })
       
     output$editor1_content <- renderPrint({input$editor1})
+  }
+))
+
+
+#4: Multiple Editors via renderUI
+runApp(list(
+  ui = fluidPage(
+    #In dynamic environment, necessary to load the resource first
+    singleton(tags$head(tags$script(src ="//tinymce.cachefly.net/4.0/tinymce.min.js"))),
+    fluidRow(
+      column(6, offset = 3,
+             h2('tinyMCE Editors:'),
+             uiOutput('editor1'),
+             hr(),
+             uiOutput('editor2')
+      )
+    )
+  ),
+  
+  server = function(input, output, session) { 
+    output$editor1 <- renderUI({tinyMCE('editor1', 'Editor 1')})
+    output$editor2 <- renderUI({tinyMCE('editor2', 'Editor 2')})
   }
 ))
