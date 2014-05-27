@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\nlibrary(shinyMCE)\n\nshinyUI(fluidPage(\n  #In dynamic environment, necessary to load the resource first\n  singleton(tags$head(tags$script(src =\"//tinymce.cachefly.net/4.0/tinymce.min.js\"))),\n  fluidRow(\n    column(6, offset = 3,\n           h2('tinyMCE Editor:'),\n           uiOutput('editor1_ui'),\n           hr(),\n           h2('Editor Content'),\n           verbatimTextOutput('editor1_content')\n    )\n  )\n))",
+    "created" : 1401203981950.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3413222037",
+    "id" : "9D35329C",
+    "lastKnownWriteTime" : 1401204137,
+    "path" : "~/Desktop/dev_software/shinyMCE/demo/apps/04-renderUI/ui.R",
+    "project_path" : "demo/apps/04-renderUI/ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

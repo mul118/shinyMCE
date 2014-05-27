@@ -1,0 +1,17 @@
+{
+    "contents" : "# Demo file\n\n# \n###############################################################################\n\nlibrary(shinyMCE)\n\n#1: Basic example\nrunApp(list(\n  ui = fluidPage(\n    fluidRow(\n      column(6, offset = 3,\n             hr(),\n             h2('tinyMCE Editor:'),\n             tinyMCE('editor1', 'Click to edit text'),\n             hr(),\n             h2('Editor Content:'),\n             verbatimTextOutput('editor1_content')\n      )\n    )\n  ),\n  \n  server = function(input, output, session) { \n    output$editor1_content <- renderPrint({input$editor1})\n  }\n))\n\n\n#2: Editor with options\neditor_opts <- \n        'inline: true, \n        plugins: [\"advlist autolink lists link image charmap print preview anchor\",\n                  \"searchreplace visualblocks code fullscreen\",\n                  \"insertdatetime media table contextmenu paste\"],\n        toolbar: \"insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image\"'        \n\nrunApp(list(\n  ui = fluidPage(\n    fluidRow(\n      column(6, offset = 3,\n             hr(),\n             h2('tinyMCE Editor:'),\n             tinyMCE('editor1', \n                     HTML('<p>This is an inline <strong>tinyMCE editor</strong> embedded in a text block.  Click to edit.</p>'), \n                     editor_opts),\n             hr(),\n             h2('Editor Content:'),\n             verbatimTextOutput('editor1_content')\n      )\n    )\n  ),\n  \n  server = function(input, output, session) { \n    output$editor1_content <- renderPrint({input$editor1})\n  }\n))\n\n\n#3: Update editor from server\nrunApp(list(\n  ui = fluidPage(\n    fluidRow(\n      column(6, offset = 3,\n             hr(),\n             h2('tinyMCE Editor:'),\n             tinyMCE('editor1', 'Update button has been pressed 0 times'),\n             br(),\n             actionButton('update_editor1', 'Update Editor'),\n             hr(),\n             h2('Editor Content:'),\n             verbatimTextOutput('editor1_content')\n      )\n    )\n  ),\n  \n  server = function(input, output, session) { \n    observe({\n      updateTinyMCE(session, 'editor1', paste0('Update button has been pressed ', input$update_editor1,' times'))\n    })\n      \n    output$editor1_content <- renderPrint({input$editor1})\n  }\n))\n\n\n#4: Dynamic Render via renderUI\nrunApp(list(\n  ui = fluidPage(\n    #In dynamic environment, necessary to load the resource first\n    singleton(tags$head(tags$script(src =\"//tinymce.cachefly.net/4.0/tinymce.min.js\"))),\n    fluidRow(\n      column(6, offset = 3,\n             h2('tinyMCE Editor:'),\n             uiOutput('editor1_ui'),\n             hr(),\n             h2('Editor Content'),\n             verbatimTextOutput('editor1_content')\n      )\n    )\n  ),\n  \n  server = function(input, output, session) { \n    output$editor1_ui       <- renderUI({tinyMCE('editor1', 'Editor 1')})\n    output$editor1_content  <- renderPrint({input$editor1})\n\n  }\n))\n",
+    "created" : 1400018099524.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3571003908",
+    "id" : "59AFA938",
+    "lastKnownWriteTime" : 1401203961,
+    "path" : "~/Desktop/dev_software/shinyMCE/inst/editor_demo.R",
+    "project_path" : "inst/editor_demo.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

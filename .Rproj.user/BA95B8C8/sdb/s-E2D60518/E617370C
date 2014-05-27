@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\nlibrary(shinyMCE)\n\nfunction(input, output, session) { \n  output$editor1_ui       <- renderUI({tinyMCE('editor1', 'Editor 1')})\n  output$editor1_content  <- renderPrint({input$editor1})\n}",
+    "created" : 1401203981319.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2605306897",
+    "id" : "E617370C",
+    "lastKnownWriteTime" : 1401204150,
+    "path" : "~/Desktop/dev_software/shinyMCE/demo/apps/04-renderUI/server.R",
+    "project_path" : "demo/apps/04-renderUI/server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "#!/usr/bin/env Rscript\n\nif (FALSE) {\n  devtools::install_github('rstudio/shiny')\n  devtools::install_github('rstudio/shinyapps')\n}\n\n# # first, sync shiny examples\n# if (file_test('-d', '../shiny/inst/examples')) {\n#   for (app in list.dirs('../shiny/inst/examples', recursive = FALSE)) {\n#     dir.create(app1 <- sub('^(\\\\d\\\\d)_', '0\\\\1-', basename(app)), showWarnings = FALSE)\n#     file.copy(list.files(app, full.names = TRUE), app1, recursive = TRUE)\n#   }\n# }\n\n# then deploy all apps\nlibrary(methods)\nlibrary(shinyapps)\n# ./deploy 001-hello 002-text ...\napps = commandArgs(TRUE)\n# if not specified, use all the directories here\nif (length(apps) == 0) {\n  apps = list.dirs(path = './inst/demo/apps', full.names = FALSE, recursive = FALSE)\n}\n# # print the apps that were not successfully deployed\n# print(apps[unlist(lapply(apps, function(app) {\n#   if (inherits(try(appDir = deployApp(appDir = paste0('./demo/apps/', app), appName = paste0('shinyMCE-', app), account = 'iheart')), 'try-error')) return(1)\n# })) != 0])\n\n# print the apps that were not successfully deployed\nlapply(apps, function(app) deployApp(appDir = paste0('./inst/demo/apps/', app), appName = paste0('shinyMCE-', app), account = 'iheart'))\n",
+    "created" : 1401205768519.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2558678998",
+    "id" : "50845F23",
+    "lastKnownWriteTime" : 1401208790,
+    "path" : "~/Desktop/dev_software/shinyMCE/inst/deploy.R",
+    "project_path" : "inst/deploy.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

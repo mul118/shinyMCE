@@ -1,0 +1,16 @@
+{
+    "contents" : ".onLoad <- function(libname, pkgname) {\n  require(shiny)\n  require(RJSONIO)\n  addResourcePath(\"shinyMCE\", system.file(\"www\", package = \"shinyMCE\"))\n}\n\n.onAttach <- function(libname, pkgname) {\n  require(shiny)    \n} ",
+    "created" : 1400601529258.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "64521546",
+    "id" : "7F3B3FE7",
+    "lastKnownWriteTime" : 1400602663,
+    "path" : "~/Desktop/dev_software/shinyMCE/R/zzz.R",
+    "project_path" : "R/zzz.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
