@@ -1,0 +1,1 @@
+Minimum example showing how to render a tinyMCE editor via `renderUI`.  Note that currently, the tinyMCE web resource needs to be loaded in `ui.R` beforehand.

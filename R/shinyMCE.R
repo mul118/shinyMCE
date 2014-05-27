@@ -3,7 +3,7 @@
 #' Display a tinyMCE editor within an application page.
 #' @param inputId id associated with the editor
 #' @param content editor content. May be a string or HTML embedded in an \code{\link{HTML}} function
-#' @param options string containing tinyMCE initialization options. See demos or source code on the tinyMCE examples website \code{\link{http://www.tinymce.com/tryit/basic.php}} for more information.
+#' @param options string containing tinyMCE initialization options. See demos or source code on the tinyMCE website http://www.tinymce.com/tryit/basic.php for more information.
 #' @return a tinyMCE editor element that can be included in a panel
 #' @examples
 #' # Basic editors

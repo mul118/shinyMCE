@@ -11,10 +11,9 @@ tinyMCE(inputId, content, options = NULL)
   embedded in an \code{\link{HTML}} function}
 
   \item{options}{string containing tinyMCE initialization
-  options. See demos or source code on the tinyMCE examples
-  website
-  \code{\link{http://www.tinymce.com/tryit/basic.php}} for
-  more information.}
+  options. See demos or source code on the [tinyMCE
+  website](http://www.tinymce.com/tryit/basic.php) for more
+  information.}
 }
 \value{
 a tinyMCE editor element that can be included in a panel

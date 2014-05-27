@@ -1,0 +1,1 @@
+A minimum config tinyMCE editor running in a Shiny app.
