@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mul118/shinyMCE.svg?branch=master)](https://travis-ci.org/mul118/shinyMCE)
 
-shinyMCE adds the ability to use tinyMCE WYSWYG editor as a component
+shinyMCE adds the ability to use tinyMCE WYSIWYG editor as a component
     in Shiny apps.
 
 To install, run:
