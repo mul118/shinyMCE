@@ -1,0 +1,1 @@
+tinyMCE editor customized via the `options` argument.  Customizations include a fully-specified toolbar layout and an inline display mode.  A full description of available options can be found at the [tinyMCE website](http://www.tinymce.com/tryit/basic.php). 

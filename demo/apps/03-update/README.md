@@ -1,0 +1,1 @@
+An example of updating the tinyMCE editor via the `updateTinyMCE` function.  Currently only the editor content can be updated - ability to reconfigure editor options will be added in a future release.

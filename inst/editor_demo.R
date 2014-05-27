@@ -83,23 +83,25 @@ runApp(list(
 ))
 
 
-#4: Multiple Editors via renderUI
+#4: Dynamic Render via renderUI
 runApp(list(
   ui = fluidPage(
     #In dynamic environment, necessary to load the resource first
     singleton(tags$head(tags$script(src ="//tinymce.cachefly.net/4.0/tinymce.min.js"))),
     fluidRow(
       column(6, offset = 3,
-             h2('tinyMCE Editors:'),
-             uiOutput('editor1'),
+             h2('tinyMCE Editor:'),
+             uiOutput('editor1_ui'),
              hr(),
-             uiOutput('editor2')
+             h2('Editor Content'),
+             verbatimTextOutput('editor1_content')
       )
     )
   ),
   
   server = function(input, output, session) { 
-    output$editor1 <- renderUI({tinyMCE('editor1', 'Editor 1')})
-    output$editor2 <- renderUI({tinyMCE('editor2', 'Editor 2')})
+    output$editor1_ui       <- renderUI({tinyMCE('editor1', 'Editor 1')})
+    output$editor1_content  <- renderPrint({input$editor1})
+
   }
 ))
