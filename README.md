@@ -10,7 +10,7 @@ To install, run:
 ```r
 if (!require("devtools"))
   install.packages("devtools")
-devtools::install_github("shinyMCE", "mul118")
+devtools::install_github("mul118/shinyMCE")
 ```
 
 The shinyMCE source code is hosted at the [shinyMCE Github repo](https://github.com/mul118/shinyMCE).  More details and examples may be found at the [shinyMCE website](http://mul118.github.io/shinyMCE/).
